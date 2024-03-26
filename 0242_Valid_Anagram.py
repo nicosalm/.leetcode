@@ -15,7 +15,7 @@ class Solution:
         for char in t:
             count[char] -= 1
         
-        # check if any character has non-zero frequency
+        # if any character has non-zero frequency
         for val in count.values():
             if val != 0:
                 return False
