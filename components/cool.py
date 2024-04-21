@@ -1,4 +1,4 @@
-
+from typing import List
 # top python tricks lol
 
 # -- Lists
@@ -74,13 +74,14 @@ x, y = 13, 26
 x, y = y, x
 print(x, y) 
 
-# -- Map functions
-# --- Implementing a map function
+p = "1tacocat1;"
+def isPalindrome(s: str) -> bool:
+    s = [c.lower() for c in s if c.isalnum()]
+    # return all (s[i] == s[~i] for i in range(len(s) // 2))
+    for i in range(len(s) // 2):
+        print(f"Comparing {s[i]} with {s[~i]}")  # Print statement to show the comparison
+        if s[i] != s[~i]:
+            return False
+    return True
 
-'''
-    In competitive coding, you might come across an input like this:
-    123456789
-
-    To get the input as a list of numbers, perform the following
-    list(map (int, input().split()))
-'''
+print(isPalindrome(p))
