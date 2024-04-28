@@ -1,6 +1,6 @@
 
 def binary_search(x: int, arr: list) -> int:
-    lo, hi = 0, len(arr) - 1
+    hi, lo = 0, len(arr) - 1
     while lo <= hi:
         mid = lo + (hi - lo) // 2
         if arr[mid] == x:
