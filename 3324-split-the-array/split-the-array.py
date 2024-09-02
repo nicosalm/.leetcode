@@ -1,9 +1,6 @@
 class Solution:
     def isPossibleToSplit(self, nums: List[int]) -> bool:
-        handmadeCounter = defaultdict(int)
-
-        for i in nums:
-            handmadeCounter[i] += 1
+        handmadeCounter = collections.Counter(nums)
         
         for i in handmadeCounter.values():
             if i > 2:
